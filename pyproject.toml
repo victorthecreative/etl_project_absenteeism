@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "jd"
+version = "0.1.0"
+description = "projeto de etl"
+authors = ["victorthecreative <vitaopoter@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "3.11.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

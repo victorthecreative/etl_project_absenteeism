@@ -6,3 +6,14 @@ theme:
  
 repo_name: "dalassam/etl-absenteismo"
 repo_url: "https://github.com/victorthecreative/etl_project_absenteeism"
+
+markdown_extensions:
+  - pymdownx.superfences:
+    custom_fences:
+      - name: mermaid
+        class: mermaid
+plugins:
+  - search:
+  - mkdocstrings:
+      default_handler: python
+

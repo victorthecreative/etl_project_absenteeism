@@ -9,9 +9,9 @@ repo_url: "https://github.com/victorthecreative/etl_project_absenteeism"
 
 markdown_extensions:
   - pymdownx.superfences:
-    custom_fences:
-      - name: mermaid
-        class: mermaid
+      custom_fences:
+        - name: mermaid
+          class: mermaid
 plugins:
   - search:
   - mkdocstrings:

@@ -2,7 +2,7 @@ site_name: ETL Absenteismo
 theme:
   name: material
   palette: 
-    primary: red
+    primary: yellow
  
 repo_name: "dalassam/etl-absenteismo"
 repo_url: "https://github.com/victorthecreative/etl_project_absenteeism"

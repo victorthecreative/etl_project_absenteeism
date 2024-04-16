@@ -401,11 +401,35 @@
 
 <a id="app.pipe.transform.concat_data_frames"></a>
   <div class="doc doc-contents first">
+  
+      <p>Função que concatena todos os dataframes em um só.</p>
+<p>args:
+data_frame_list: Lista com todos os dataframes gerados, de todos os arquivos 
+Excel.</p>
+<p>return: Dataframe concatenado com todos os arquivos Excel</p>
 
           <details class="quote">
             <summary>Source code in <code>app/pipe/transform.py</code></summary>
-            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">10</span>
-<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">concat_data_frames</span><span class="p">(</span><span class="n">data_frame_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+            <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">def</span> <span class="nf">concat_data_frames</span><span class="p">(</span><span class="n">data_frame_list</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Função que concatena todos os dataframes em um só.</span>
+
+<span class="sd">    args:</span>
+<span class="sd">    data_frame_list: Lista com todos os dataframes gerados, de todos os arquivos </span>
+<span class="sd">    Excel.</span>
+
+<span class="sd">    return: Dataframe concatenado com todos os arquivos Excel</span>
+<span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">data_frame_list</span><span class="p">)</span>
 </code></pre></div></td></tr></table></div>
           </details>

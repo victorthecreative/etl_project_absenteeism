@@ -10,6 +10,8 @@
       
       
       
+        <link rel="next" href="extract/">
+      
       
       <link rel="icon" href="assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
@@ -42,6 +44,8 @@
       
     
     
+      <link rel="stylesheet" href="assets/_mkdocstrings.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -57,7 +61,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="yellow" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -66,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-mkdocs" class="md-skip">
+        <a href="#contexto" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to MkDocs
+              Contexto
             
           </span>
         </div>
@@ -232,7 +236,7 @@
           
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Contexto
   </span>
   
 
@@ -243,7 +247,7 @@
         
   
   <span class="md-ellipsis">
-    Welcome to MkDocs
+    Contexto
   </span>
   
 
@@ -265,18 +269,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
+      Workflow
     </span>
   </a>
   
@@ -286,6 +281,66 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="extract/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extract
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="load/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Load
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="transform/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transform
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -317,18 +372,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#commands" class="md-nav__link">
+  <a href="#workflow" class="md-nav__link">
     <span class="md-ellipsis">
-      Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#project-layout" class="md-nav__link">
-    <span class="md-ellipsis">
-      Project layout
+      Workflow
     </span>
   </a>
   
@@ -352,21 +398,23 @@
   
 
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
-<ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
-</ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
+<h1 id="contexto"><strong>Contexto</strong><img alt="1712749092793" src="image/index/1712749092793.png" /></h1>
+<hr />
+<p>Este projeto se trata de um processo de <strong><em>ETL (Extract, Transform e Load)</em></strong> para a área de Recursos Humanos (RH) da  <strong>Calin Carteira Digital</strong> . O objetivo principal é gerenciar e analisar os dados relacionados ao absenteísmo dos colaboradores. O processo de extração, transformação e carga dos dados é fundamental para garantir a integridade e a qualidade das informações utilizadas nas análises e tomadas de decisão. Ao implementar esse fluxo de ETL, busca-se otimizar a gestão de recursos humanos, identificar padrões de ausência, entender causas subjacentes e desenvolver estratégias eficazes para melhorar a produtividade e o bem-estar no ambiente de trabalho.</p>
+<h2 id="workflow">Workflow</h2>
+<pre class="mermaid"><code>flowchart LR
+    subgraph ETL [Pipeline]
+        A(Multiplos Arquivos Excel) --&gt; B[Extract: extract_from_excel]
+        B --&gt; C[Gera uma lista de Dataframes]
+        C --&gt; D[Transformation: concat_data_frames]
+        D --&gt; E[Gera um Dataframe consolidado]
+        E --&gt; F[Load: Converte para Excel]
+        F --&gt; G(Salva o consolidado em Excel)
+        G --&gt; H(Pasta Output: Um único arquivo Excel)
+        style ETL align:center
+    end
+    style ETL width:800px
+    style ETL align:center</code></pre>
 
 
 

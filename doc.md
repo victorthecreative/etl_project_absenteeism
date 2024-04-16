@@ -8,6 +8,7 @@ que foi dado o comando)
 
 2 - Gestão do ambiente virtual
 
+
 poetry config virtualenvs.in-project true
 poetry init
 poetry shell (inicia o ambiente)
@@ -31,4 +32,4 @@ Ambas acima seguem o padrão pep8, e ja formatam automticamente
 
 temos tambem a flake8 - Esse olha todos os arquivos é ve oq esta fora da pep8 e aponta
 
-MKDocs
+MKDocs vamos usar para realizar a dococumentação do nosso projeto.

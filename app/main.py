@@ -8,5 +8,5 @@ if __name__ == '__main__':
     data_frame = concat_data_frames(dataframe_list)
     print("concatenado em um unico dataframe")
     load_excel = load_excel(data_frame, 'data/output', 'output_file')
-    print(" salvo em um excel só")
+    print("Processo concluido")
 
